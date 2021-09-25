@@ -10,6 +10,7 @@ Your project description goes here. What problem did you solve? How did you solv
 
 # Set up 
 [x] - npm install and run server and client
+[x] - install needed redux and react dependencies
 
 # FORM
 [] - establish multi part form
@@ -32,8 +33,8 @@ Your project description goes here. What problem did you solve? How did you solv
 [] - return components wrapped in a router and routes for each component
 
 # Index.jsx
-[] - add neccessary imports...
-[] - set defaults
+[x] - add neccessary imports...
+[] - set defaults (is this neccessary?)
 [] - set default state for list
 [] - create reduxStore (include combineReducers and applyMiddleware)
 [] - ReactDOM... (if not already included)
