@@ -14,7 +14,7 @@ function UnderstandingForm() {
         const action = {
             type: 'SET_RESPONSE_LIST',
             payload: {
-                understanding: understanding,
+                understanding: understanding
             }
         }
         dispatch(action);
@@ -24,7 +24,7 @@ function UnderstandingForm() {
         <div>
             <form onSubmit={handleNextButton}>
                 <div>
-                    <h4>Support?</h4>
+                    <h4>Understanding?</h4>
                     <input value={understanding}
                     onChange={(event => setUnderstandingResponse(event.target.value))}
                     type='number'

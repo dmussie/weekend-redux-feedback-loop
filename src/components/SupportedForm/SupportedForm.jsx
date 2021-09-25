@@ -1,35 +1,34 @@
 import React from 'react';
-import { useState } from 'react';
+import {useState} from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
 
-function FeelingForm() {
+function SupportedForm() {
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const [feeling, setFeelingResponse] = useState(0);
+    const [supported, setSupportedResponse] = useState(0);
 
     const handleNextButton = (event) => {
         event.preventDefault();
         const action = {
-            type: 'SET_RESPONSE_LIST',
+            type: 'SET_SUPPORTED_LIST',
             payload: {
-                feeling: feeling
+                supported: supported
             }
         }
         dispatch(action);
-        history.push('/understanding');
+        history.push('/comments');
     }
-    
     return (
         <div>
             <form onSubmit={handleNextButton}>
                 <div>
-                    <h4>Feeling?</h4>
-                    <input value={feeling}
-                    onChange={(event => setFeelingResponse(event.target.value))}
-                    type='number'
-                    placeholder='0'/>
+                   <h4>Support?</h4>
+                   <input value={supported}
+                   onChange={(event => setSupportedResponse(event.target.value))}
+                   type='number'
+                   placeholder='0' /> 
                 </div>
                 <button type='Submit'>NEXT</button>
             </form>
@@ -37,4 +36,4 @@ function FeelingForm() {
     )
 }
 
-export default FeelingForm;
+export default SupportedForm;
