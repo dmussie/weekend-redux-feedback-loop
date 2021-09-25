@@ -7,7 +7,7 @@ function SupportedForm() {
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const [supported, setSupportedResponse] = useState(0);
+    const [supported, setSupportedResponse] = useState('');
 
     const handleNextButton = (event) => {
         event.preventDefault();
@@ -25,10 +25,12 @@ function SupportedForm() {
             <form onSubmit={handleNextButton}>
                 <div>
                    <h4>Support?</h4>
-                   <input value={supported}
+                   <input 
+                   required
+                   value={supported}
                    onChange={(event => setSupportedResponse(event.target.value))}
                    type='number'
-                   placeholder='0' /> 
+                   /> 
                 </div>
                 <button type='Submit'>NEXT</button>
             </form>

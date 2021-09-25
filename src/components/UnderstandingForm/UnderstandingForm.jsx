@@ -7,7 +7,7 @@ function UnderstandingForm() {
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const [understanding, setUnderstandingResponse] = useState(0);
+    const [understanding, setUnderstandingResponse] = useState('');
 
     const handleNextButton = (event) => {
         event.preventDefault();
@@ -25,10 +25,12 @@ function UnderstandingForm() {
             <form onSubmit={handleNextButton}>
                 <div>
                     <h4>Understanding?</h4>
-                    <input value={understanding}
+                    <input 
+                    required
+                    value={understanding}
                     onChange={(event => setUnderstandingResponse(event.target.value))}
                     type='number'
-                    placeholder='0' />
+                    />
                 </div>
                 <button type='Submit'>NEXT</button>
             </form>

@@ -13,8 +13,8 @@ Your project description goes here. What problem did you solve? How did you solv
 [x] - install needed redux and react dependencies
 
 # FORM
-[] - establish multi part form
-    [] - const dispatch and const history
+[x] - establish multi part form
+    [x] - const dispatch and const history
     [] - handleSubmit with multiple dispatch events
         [] - Feeling dispatch (must have value)
         [] - Understanding dispatch (must have value)
