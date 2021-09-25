@@ -14,7 +14,7 @@ const responseToAdd = (state = 0, action) => {
     return state;
 }
 
-const responseList = (state = [], action) => {
+const responseList = (state = {}, action) => {
     if (action.type === 'SET_RESPONSE_LIST') {
         return action.payload;
     }

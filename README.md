@@ -23,21 +23,20 @@ Your project description goes here. What problem did you solve? How did you solv
 # Confirm
 [] - Create new component to confirm and send results to server
     [] - useSelector and useHistory
-    [] - create POST route (and GET too?)
+    [] - create POST route
     [] - return results to display on the DOM (include submit button)
     [] - add component to App.jsx
 
 # App
 [] - import axios, useEffect, useDispatch, and components
-[] - Create axios GET route
 [] - return components wrapped in a router and routes for each component
 
 # Index.jsx
 [x] - add neccessary imports...
-[] - set defaults (is this neccessary?)
-[] - set default state for list
-[] - create reduxStore (include combineReducers and applyMiddleware)
-[] - ReactDOM... (if not already included)
+[x] - set defaults (is this neccessary?)
+[x] - set default state for list
+[x] - create reduxStore (include combineReducers and applyMiddleware)
+[x] - ReactDOM... (if not already included)
 
 
 
