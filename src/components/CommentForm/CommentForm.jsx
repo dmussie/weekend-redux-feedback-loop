@@ -3,37 +3,39 @@ import {useState} from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
 
-function SupportedForm() {
+function CommentForm() {
     const dispatch = useDispatch();
     const history = useHistory();
-
-    const [supported, setSupportedResponse] = useState(0);
+    
+    const [comment, setCommentResponse] = useState('');
 
     const handleNextButton = (event) => {
         event.preventDefault();
         const action = {
             type: 'SET_RESPONSE_LIST',
             payload: {
-                supported: supported
+                comment: comment
             }
         }
         dispatch(action);
-        history.push('/comments');
+        history.push('/review');
     }
     return (
         <div>
             <form onSubmit={handleNextButton}>
                 <div>
-                   <h4>Support?</h4>
-                   <input value={supported}
-                   onChange={(event => setSupportedResponse(event.target.value))}
-                   type='number'
-                   placeholder='0' /> 
+                   <h3>Any comments you want to leave?</h3>
+                   <h4>Comments</h4>
+                   <input value={comment}
+                   onChange={(event => setCommentResponse(event.target.value))}
+                   type='text'
+                   placeholder='Let us know!' /> 
                 </div>
                 <button type='Submit'>NEXT</button>
             </form>
         </div>
     )
+
 }
 
-export default SupportedForm;
+export default CommentForm;
