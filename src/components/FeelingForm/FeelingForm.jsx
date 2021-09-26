@@ -12,7 +12,7 @@ function FeelingForm() {
     const handleNextButton = (event) => {
         event.preventDefault();
         const action = {
-            type: 'SET_FEEDBACK_LIST',
+            type: 'ADD_FEELING',
             payload: {
                 feeling: feeling
             }

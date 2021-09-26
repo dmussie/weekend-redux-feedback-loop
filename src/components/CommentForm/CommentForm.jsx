@@ -7,14 +7,14 @@ function CommentForm() {
     const dispatch = useDispatch();
     const history = useHistory();
     
-    const [comment, setCommentResponse] = useState('');
+    const [comments, setCommentResponse] = useState('');
 
     const handleNextButton = (event) => {
         event.preventDefault();
         const action = {
-            type: 'SET_FEEDBACK_LIST',
+            type: 'ADD_COMMENT',
             payload: {
-                comment: comment
+                comments: comments
             }
         }
         dispatch(action);
@@ -26,7 +26,7 @@ function CommentForm() {
                 <div>
                    <h2>Any comments you want to leave?</h2>
                    <h4>Comments</h4>
-                   <input value={comment}
+                   <input value={comments}
                    onChange={(event => setCommentResponse(event.target.value))}
                    type='text'
                    placeholder='Let us know!' /> 

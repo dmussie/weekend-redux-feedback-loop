@@ -12,7 +12,7 @@ function UnderstandingForm() {
     const handleNextButton = (event) => {
         event.preventDefault();
         const action = {
-            type: 'SET_FEEDBACK_LIST',
+            type: 'ADD_UNDERSTANDING',
             payload: {
                 understanding: understanding
             }

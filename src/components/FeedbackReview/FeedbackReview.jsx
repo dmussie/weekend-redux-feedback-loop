@@ -4,7 +4,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 function FeedbackReview() {
-    const reduxStore = useSelector ( store => store.feedbackList );
+    const feelingFeedback = useSelector ( store => store.feelingReducer );
+    const understandingFeedback = useSelector ( store => store.understandingReducer);
+    const supportFeedback = useSelector ( store => store.supportReducer);
+    const commentFeedback = useSelector ( store => store.commentReducer);
     const dispatch = useDispatch();
     const history = useHistory();
     const handleReview = () => {
@@ -14,7 +17,12 @@ function FeedbackReview() {
         axios({
             method: 'POST',
             url: '/feedback',
-            data: reduxStore
+            data: {
+                feeling: feelingFeedback,
+                understanding: understandingFeedback,
+                support: supportFeedback,
+                comments: commentFeedback
+            }
         }).then((response) => {
             console.log('feedback complete!');
             alert('Feedback received!');
@@ -30,11 +38,11 @@ function FeedbackReview() {
                 <h1>Review Your Feedback</h1>
             </header>
 
-            <div key={reduxStore.id}>
-                <p>{reduxStore.feeling}</p>
-                <p>{reduxStore.understanding}</p>
-                <p>{reduxStore.support}</p>
-                <p>{reduxStore.comments}</p>
+            <div>
+                <p>{feelingFeedback.feeling}</p>
+                <p>{understandingFeedback.understanding}</p>
+                <p>{supportFeedback.support}</p>
+                <p>{commentFeedback.comments}</p>
             </div>
             <button onClick={handleReview}>Submit</button>
         </div>

@@ -7,14 +7,14 @@ function SupportedForm() {
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const [supported, setSupportedResponse] = useState('');
+    const [support, setSupportResponse] = useState('');
 
     const handleNextButton = (event) => {
         event.preventDefault();
         const action = {
-            type: 'SET_FEEDBACK_LIST',
+            type: 'ADD_SUPPORT',
             payload: {
-                supported: supported
+                support: support
             }
         }
         dispatch(action);
@@ -28,8 +28,8 @@ function SupportedForm() {
                     <h4>Support?</h4>
                     <input 
                     required
-                    value={supported}
-                    onChange={(event => setSupportedResponse(event.target.value))}
+                    value={support}
+                    onChange={(event => setSupportResponse(event.target.value))}
                     type='number'
                     /> 
                 </div>
