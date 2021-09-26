@@ -11,8 +11,7 @@ function FeedbackReview() {
     const dispatch = useDispatch();
     const history = useHistory();
     const handleReview = () => {
-        const action = { type: 'CLEAR_ALL_FEEDBACK' }
-        dispatch(action);
+        
 
         axios({
             method: 'POST',

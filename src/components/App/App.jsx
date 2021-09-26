@@ -8,6 +8,7 @@ import SupportedForm from '../SupportedForm/SupportedForm';
 import CommentForm from '../CommentForm/CommentForm';
 import FeedbackReview from '../FeedbackReview/FeedbackReview';
 import { useDispatch } from 'react-redux';
+import ThankYou from '../ThankYou/ThankYou';
 
 function App() {
 
@@ -51,6 +52,9 @@ function App() {
         </Route>
         <Route exact path="/review">
           <FeedbackReview />
+        </Route>
+        <Route exact path="/thankyou">
+          <ThankYou />
         </Route>
       </Router>
       

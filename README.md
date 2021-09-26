@@ -11,8 +11,8 @@ Your project description goes here. What problem did you solve? How did you solv
 # Set up 
 [x] - npm install and run server and client
 [x] - install needed redux and react dependencies
-[] - create express routes on server.js
-[] - setup feedback.router.js in a routes folder
+[x] - create express routes on server.js
+[x] - setup feedback.router.js in a routes folder
 
 
 # FORM
@@ -24,15 +24,19 @@ Your project description goes here. What problem did you solve? How did you solv
         [x] - Support dispatch (must have value)
         [x] - Comments dispatch (can be left blank)
 # Confirm
-[] - Create new component to confirm and send results to server
-    [] - useSelector and useHistory
-    [] - create POST route
-    [] - return results to display on the DOM (include submit button)
-    [] - add component to App.jsx
+[x] - Create new component to confirm and send results to server
+    [x] - useSelector and useHistory
+    [x] - create POST route
+    [x] - return results to display on the DOM (include submit button)
+    [x] - submit completed feedback to server (should see new feedback on postico database)
+    [x] - add component to App.jsx
+
+# Thank You
+[] - Create new component to reset servey from the beginning
+    [] - Old data should be cleared when back at first step (add this feature to reducers in index.js) 
 
 # App
 [x] - import axios, useEffect, useDispatch, and components
-[] - Create Axios GET request
 [] - return components wrapped in a router and routes for each component
 
 # Index.jsx
