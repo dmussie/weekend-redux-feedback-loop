@@ -6,7 +6,6 @@ import { useHistory } from 'react-router';
 function SupportedForm() {
     const dispatch = useDispatch();
     const history = useHistory();
-
     const [support, setSupportResponse] = useState('');
 
     const handleNextButton = (event) => {

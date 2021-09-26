@@ -3,6 +3,7 @@ import {useState} from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
 
+// this function contains the form for the comments portion of the feedback survey
 function CommentsForm() {
     const dispatch = useDispatch();
     const history = useHistory();
@@ -20,6 +21,8 @@ function CommentsForm() {
         dispatch(action);
         history.push('/review');
     }
+    // comments are not required for this survey 
+    // so the input doesn't contained a required tag unlike the other forms
     return (
         <div>
             <form onSubmit={handleNextButton}>

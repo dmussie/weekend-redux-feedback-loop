@@ -20,7 +20,12 @@ function FeelingForm() {
         dispatch(action);
         history.push('/understanding');
     }
-    
+    // the element contains an onSubmit action 
+    // which will be enabled on the click of the Next button
+    // the input field requires data and will not allow the user to leave it blank
+    // the onChange event detects when the value of the input changes
+    // and will take into the account of the exact value in the input field
+    // with the target.event.value input in setFeelingResponse 
     return (
         <div>
             <form onSubmit={handleNextButton}>
