@@ -13,22 +13,22 @@ function App() {
 
   const dispatch = useDispatch();
 
-  const fetchFeedback = () => {
-    axios({
-      method: 'GET',
-      url: '/feedback'
-    }).then(response => {
-      console.log(response.data);
-      dispatch({
-        type: 'SET_FEEDBACK_LIST',
-        payload: response.data
-      });
-    });
-  };
+  // const fetchFeedback = () => {
+  //   axios({
+  //     method: 'GET',
+  //     url: '/feedback'
+  //   }).then(response => {
+  //     console.log(response.data);
+  //     dispatch({
+  //       type: 'SET_FEEDBACK_LIST',
+  //       payload: response.data
+  //     });
+  //   });
+  // };
 
-  useEffect(() => {
-    fetchFeedback();
-  }, []);
+  // useEffect(() => {
+  //   fetchFeedback();
+  // }, []);
 
   return (
     <div className='App'>

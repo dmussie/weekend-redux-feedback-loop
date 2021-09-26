@@ -18,16 +18,16 @@ function FeedbackReview() {
             method: 'POST',
             url: '/feedback',
             data: {
-                feeling: feelingFeedback,
-                understanding: understandingFeedback,
-                support: supportFeedback,
-                comments: commentFeedback
+                feeling: feelingFeedback.feeling,
+                understanding: understandingFeedback.understanding,
+                support: supportFeedback.support,
+                comments: commentFeedback.comments
             }
         }).then((response) => {
             console.log('feedback complete!');
             alert('Feedback received!');
         }).catch((error) => {
-            alert('Could Not Receive Order!')
+            alert('Could Not Receive Feedback!')
         })
 
         history.push('/thankyou');
