@@ -12,7 +12,7 @@ function SupportedForm() {
     const handleNextButton = (event) => {
         event.preventDefault();
         const action = {
-            type: 'SET_RESPONSE_LIST',
+            type: 'SET_FEEDBACK_LIST',
             payload: {
                 supported: supported
             }
@@ -24,13 +24,14 @@ function SupportedForm() {
         <div>
             <form onSubmit={handleNextButton}>
                 <div>
-                   <h4>Support?</h4>
-                   <input 
-                   required
-                   value={supported}
-                   onChange={(event => setSupportedResponse(event.target.value))}
-                   type='number'
-                   /> 
+                    <h2>How well are you being supported?</h2>
+                    <h4>Support?</h4>
+                    <input 
+                    required
+                    value={supported}
+                    onChange={(event => setSupportedResponse(event.target.value))}
+                    type='number'
+                    /> 
                 </div>
                 <button type='Submit'>NEXT</button>
             </form>

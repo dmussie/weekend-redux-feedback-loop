@@ -12,7 +12,7 @@ function CommentForm() {
     const handleNextButton = (event) => {
         event.preventDefault();
         const action = {
-            type: 'SET_RESPONSE_LIST',
+            type: 'SET_FEEDBACK_LIST',
             payload: {
                 comment: comment
             }
@@ -24,7 +24,7 @@ function CommentForm() {
         <div>
             <form onSubmit={handleNextButton}>
                 <div>
-                   <h3>Any comments you want to leave?</h3>
+                   <h2>Any comments you want to leave?</h2>
                    <h4>Comments</h4>
                    <input value={comment}
                    onChange={(event => setCommentResponse(event.target.value))}

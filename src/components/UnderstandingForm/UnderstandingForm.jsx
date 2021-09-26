@@ -12,7 +12,7 @@ function UnderstandingForm() {
     const handleNextButton = (event) => {
         event.preventDefault();
         const action = {
-            type: 'SET_RESPONSE_LIST',
+            type: 'SET_FEEDBACK_LIST',
             payload: {
                 understanding: understanding
             }
@@ -24,6 +24,7 @@ function UnderstandingForm() {
         <div>
             <form onSubmit={handleNextButton}>
                 <div>
+                    <h2>How well are you understanding the content?</h2>
                     <h4>Understanding?</h4>
                     <input 
                     required

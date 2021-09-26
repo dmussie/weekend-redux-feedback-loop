@@ -7,26 +7,43 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
-// const responseToAdd = (state = 0, action) => {
-//     if(action.type === 'SET_NEW_RESPONSE') {
-//         return action.payload;
-//     }
-//     return state;
-// }
 
-const responseList = (state = {}, action) => {
-    if (action.type === 'SET_RESPONSE_LIST') {
-        return action.payload;
+const defaultFeedback = {feeling: '', understanding: '', support: '', comments:''};
+
+const feelingReducer = (state = defaultFeedback, action) => {
+    if (action.type === 'ADD_FEELING') {
+        return {...state, feeling: action.payload.feeling};
     }
-    if (action.type === 'CLEAR_ALL_RESPONSES') {
-        return {};
+    return state;
+}
+
+const understandingReducer = (state = defaultFeedback, action) => {
+    if (action.type === 'ADD_UNDERSTANDING') {
+        return {...state, understanding: action.payload.understanding};
+    }
+    return state;
+}
+
+const supportReducer = (state = defaultFeedback, action) => {
+    if (action.type === 'ADD_SUPPORT') {
+        return {...state, support: action.payload.support};
+    }
+    return state;
+}
+
+const commentReducer = (state = defaultFeedback, action) => {
+    if (action.type === 'ADD_COMMENT') {
+        return {...state, comment: action.payload.support};
     }
     return state;
 }
 
 const reduxStore = createStore(
     combineReducers({
-        responseList,
+        feelingReducer,
+        understandingReducer,
+        supportReducer,
+        commentReducer
     }),
     applyMiddleware(logger)
 );

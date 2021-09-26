@@ -12,7 +12,7 @@ function FeelingForm() {
     const handleNextButton = (event) => {
         event.preventDefault();
         const action = {
-            type: 'SET_RESPONSE_LIST',
+            type: 'SET_FEEDBACK_LIST',
             payload: {
                 feeling: feeling
             }
@@ -25,6 +25,7 @@ function FeelingForm() {
         <div>
             <form onSubmit={handleNextButton}>
                 <div>
+                    <h2>How are you feeling today?</h2>
                     <h4>Feeling?</h4>
                     <input 
                     required
