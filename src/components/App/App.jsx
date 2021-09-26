@@ -6,6 +6,7 @@ import FeelingForm from '../FeelingForm/FeelingForm';
 import UnderstandingForm from '../UnderstandingForm/UnderstandingForm';
 import SupportedForm from '../SupportedForm/SupportedForm';
 import CommentForm from '../CommentForm/CommentForm';
+import FeedbackReview from '../FeedbackReview/FeedbackReview';
 
 function App() {
 
@@ -27,6 +28,9 @@ function App() {
         </Route>
         <Route exact path="/comments">
           <CommentForm />
+        </Route>
+        <Route exact path="/review">
+          <FeedbackReview />
         </Route>
       </Router>
       

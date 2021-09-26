@@ -13,10 +13,37 @@ function FeedbackReview() {
 
         axios({
             method: 'POST',
-            url: ''
+            url: '/response',
+            data: {
+                feeling: feeling,
+                understanding: understanding,
+                support: support,
+                comments: comments
+            }
+        }).then((response) => {
+            console.log('feedback complete!');
+            alert('Feedback received!');
+        }).catch((error) => {
+            alert('Could Not Receive Order!')
         })
+
+        history.push('/thankyou');
     }
     return (
+        <div>
+            <header>
+                <h1>Review Your Feedback</h1>
+            </header>
 
+            <div key={reduxStore.responseList.id}>
+                <p>{reduxStore.responseList.feeling}</p>
+                <p>{reduxStore.responseList.understanding}</p>
+                <p>{reduxStore.responseList.support}</p>
+                <p>{reduxStore.responseList.comments}</p>
+            </div>
+            <button onClick={handleReview}>Submit</button>
+        </div>
     )
 }
+
+export default FeedbackReview;
