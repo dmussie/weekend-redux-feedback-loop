@@ -13,7 +13,7 @@ Your project description goes here. What problem did you solve? How did you solv
 [x] - install needed redux and react dependencies
 [] - create express routes on server.js
 [] - setup feedback.router.js in a routes folder
-[] - setup pool.js in a modules folder
+
 
 # FORM
 [x] - establish multi part form
