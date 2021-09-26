@@ -40,8 +40,8 @@ const supportReducer = (state = defaultFeedback, action) => {
     return state;
 }
 
-const commentReducer = (state = defaultFeedback, action) => {
-    if (action.type === 'ADD_COMMENT') {
+const commentsReducer = (state = defaultFeedback, action) => {
+    if (action.type === 'ADD_COMMENTS') {
         return {...state, comments: action.payload.comments};
     }
     if (action.type === 'CLEAR_ALL_FEEDBACK') {
@@ -55,7 +55,7 @@ const reduxStore = createStore(
         feelingReducer,
         understandingReducer,
         supportReducer,
-        commentReducer
+        commentsReducer
     }),
     applyMiddleware(logger)
 );

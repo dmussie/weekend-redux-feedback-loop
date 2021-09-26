@@ -6,7 +6,7 @@ function ThankYou() {
     const feelingFeedback = useSelector ( store => store.feelingReducer );
     const understandingFeedback = useSelector ( store => store.understandingReducer);
     const supportFeedback = useSelector ( store => store.supportReducer);
-    const commentFeedback = useSelector ( store => store.commentReducer);
+    const commentsFeedback = useSelector ( store => store.commentsReducer);
     const dispatch = useDispatch();
     const history = useHistory();
     
@@ -17,7 +17,7 @@ function ThankYou() {
                 feeling: feelingFeedback.feeling,
                 understanding: understandingFeedback.understanding,
                 support: supportFeedback.support,
-                comments: commentFeedback.comments
+                comments: commentsFeedback.comments
             }   
         }
         dispatch(action);

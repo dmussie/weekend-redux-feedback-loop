@@ -7,8 +7,7 @@ function FeedbackReview() {
     const feelingFeedback = useSelector ( store => store.feelingReducer );
     const understandingFeedback = useSelector ( store => store.understandingReducer);
     const supportFeedback = useSelector ( store => store.supportReducer);
-    const commentFeedback = useSelector ( store => store.commentReducer);
-    const dispatch = useDispatch();
+    const commentsFeedback = useSelector ( store => store.commentsReducer);
     const history = useHistory();
     const handleReview = () => {
         
@@ -20,7 +19,7 @@ function FeedbackReview() {
                 feeling: feelingFeedback.feeling,
                 understanding: understandingFeedback.understanding,
                 support: supportFeedback.support,
-                comments: commentFeedback.comments
+                comments: commentsFeedback.comments
             }
         }).then((response) => {
             console.log('feedback complete!');
@@ -41,7 +40,7 @@ function FeedbackReview() {
                 <p>{feelingFeedback.feeling}</p>
                 <p>{understandingFeedback.understanding}</p>
                 <p>{supportFeedback.support}</p>
-                <p>{commentFeedback.comments}</p>
+                <p>{commentsFeedback.comments}</p>
             </div>
             <button onClick={handleReview}>Submit</button>
         </div>

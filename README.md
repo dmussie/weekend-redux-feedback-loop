@@ -32,12 +32,12 @@ Your project description goes here. What problem did you solve? How did you solv
     [x] - add component to App.jsx
 
 # Thank You
-[] - Create new component to reset servey from the beginning
-    [] - Old data should be cleared when back at first step (add this feature to reducers in index.js) 
+[x] - Create new component to reset servey from the beginning
+    [x] - Old data should be cleared when back at first step (add this feature to reducers in index.js) 
 
 # App
 [x] - import axios, useEffect, useDispatch, and components
-[] - return components wrapped in a router and routes for each component
+[x] - return components wrapped in a router and routes for each component
 
 # Index.jsx
 [x] - add neccessary imports...
