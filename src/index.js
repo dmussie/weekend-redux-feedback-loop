@@ -7,16 +7,19 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
-const responseToAdd = (state = 0, action) => {
-    if(action.type === 'SET_NEW_RESPONSE') {
-        return action.payload;
-    }
-    return state;
-}
+// const responseToAdd = (state = 0, action) => {
+//     if(action.type === 'SET_NEW_RESPONSE') {
+//         return action.payload;
+//     }
+//     return state;
+// }
 
 const responseList = (state = {}, action) => {
     if (action.type === 'SET_RESPONSE_LIST') {
         return action.payload;
+    }
+    if (action.type === 'CLEAR_ALL_RESPONSES') {
+        return {};
     }
     return state;
 }
@@ -24,7 +27,6 @@ const responseList = (state = {}, action) => {
 const reduxStore = createStore(
     combineReducers({
         responseList,
-        responseToAdd,
     }),
     applyMiddleware(logger)
 );

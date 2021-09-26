@@ -11,15 +11,18 @@ Your project description goes here. What problem did you solve? How did you solv
 # Set up 
 [x] - npm install and run server and client
 [x] - install needed redux and react dependencies
+[] - create express routes on server.js
+[] - setup feedback.router.js in a routes folder
+[] - setup pool.js in a modules folder
 
 # FORM
 [x] - establish multi part form
     [x] - const dispatch and const history
-    [] - handleSubmit with multiple dispatch events
-        [] - Feeling dispatch (must have value)
-        [] - Understanding dispatch (must have value)
-        [] - Support dispatch (must have value)
-        [] - Comments dispatch (can be left blank)
+    [x] - handleSubmit with multiple dispatch events
+        [x] - Feeling dispatch (must have value)
+        [x] - Understanding dispatch (must have value)
+        [x] - Support dispatch (must have value)
+        [x] - Comments dispatch (can be left blank)
 # Confirm
 [] - Create new component to confirm and send results to server
     [] - useSelector and useHistory
@@ -28,7 +31,8 @@ Your project description goes here. What problem did you solve? How did you solv
     [] - add component to App.jsx
 
 # App
-[] - import axios, useEffect, useDispatch, and components
+[x] - import axios, useEffect, useDispatch, and components
+[] - Create Axios GET request
 [] - return components wrapped in a router and routes for each component
 
 # Index.jsx
