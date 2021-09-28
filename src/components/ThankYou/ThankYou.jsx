@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
+import Button from '@material-ui/core/Button';
 
 function ThankYou() {
     // here, we call each redux store reducer

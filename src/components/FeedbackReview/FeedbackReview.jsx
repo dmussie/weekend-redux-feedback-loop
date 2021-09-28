@@ -44,10 +44,10 @@ function FeedbackReview() {
             </header>
 
             <div>
-                <p>{feelingFeedback.feeling}</p>
-                <p>{understandingFeedback.understanding}</p>
-                <p>{supportFeedback.support}</p>
-                <p>{commentsFeedback.comments}</p>
+                <p>Feeling: {feelingFeedback.feeling}</p>
+                <p>Understanding: {understandingFeedback.understanding}</p>
+                <p>Support: {supportFeedback.support}</p>
+                <p>Comments: {commentsFeedback.comments}</p>
             </div>
             <button onClick={handleReview}>Submit</button>
         </div>

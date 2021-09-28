@@ -27,6 +27,8 @@ function SupportedForm() {
                     <h4>Support?</h4>
                     <input 
                     required
+                    min='1'
+                    max='5'
                     value={support}
                     onChange={(event => setSupportResponse(event.target.value))}
                     type='number'

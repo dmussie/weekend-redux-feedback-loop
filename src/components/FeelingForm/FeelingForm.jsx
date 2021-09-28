@@ -34,6 +34,8 @@ function FeelingForm() {
                     <h4>Feeling?</h4>
                     <input 
                     required
+                    min='1'
+                    max='5'
                     value={feeling}
                     onChange={(event => setFeelingResponse(event.target.value))}
                     type='number'

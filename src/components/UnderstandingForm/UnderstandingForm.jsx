@@ -45,6 +45,8 @@ function UnderstandingForm() {
                     <h4>Understanding?</h4>
                     <input 
                     required
+                    min='1'
+                    max='5'
                     value={understanding}
                     onChange={(event => setUnderstandingResponse(event.target.value))}
                     type='number'
