@@ -13,6 +13,8 @@ I went on to created components for each of our forms which enables a user's act
 
 To stage all the actions required to make this application possible, had to use the App.jsx file to declare a router which contains our components wrapped in routers that define the paths of the pages in this web application.
 
+To see the fully functional site, please visit: https://git.heroku.com/danny-made-a-feedback-app.git
+
 ## Application Images
 
 This is one of the application form pages
@@ -45,45 +47,18 @@ This is the review page you are navigated to upon completion of the survey
 4. You will reach a thank you page which shows you've completed the survey.
 5. Click 'Leave New Feedback' to reset the survey and navigate back to the home page
 
-## Checklist
+## Built With
 
-# Set up 
-[x] - npm install and run server and client
-[x] - install needed redux and react dependencies
-[x] - create express routes on server.js
-[x] - setup feedback.router.js in a routes folder
+The JavaScript programming language utilizing the React framework brought this application to life. Postico was utilized as the client side GUI for viewing and storing user data whilst building this application.
 
+## Acknowledgement
 
-# FORM
-[x] - establish multi part form
-    [x] - const dispatch and const history
-    [x] - handleSubmit with multiple dispatch events
-        [x] - Feeling dispatch (must have value)
-        [x] - Understanding dispatch (must have value)
-        [x] - Support dispatch (must have value)
-        [x] - Comments dispatch (can be left blank)
-# Confirm
-[x] - Create new component to confirm and send results to server
-    [x] - useSelector and useHistory
-    [x] - create POST route
-    [x] - return results to display on the DOM (include submit button)
-    [x] - submit completed feedback to server (should see new feedback on postico database)
-    [x] - add component to App.jsx
+Thanks to my instructors and classmates Prime Digital Academy for providing me with the tools to make this project go live!
 
-# Thank You
-[x] - Create new component to reset servey from the beginning
-    [x] - Old data should be cleared when back at first step (add this feature to reducers in index.js) 
+## Support
 
-# App
-[x] - import axios, useEffect, useDispatch, and components
-[x] - return components wrapped in a router and routes for each component
+If you have any suggestions or issues, please email me at dannymussie7@gmail.com 
 
-# Index.jsx
-[x] - add neccessary imports...
-[x] - set defaults 
-[x] - set default state for list
-[x] - create reduxStore (include combineReducers and applyMiddleware)
-[x] - ReactDOM provider
 
 
 
